@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="main.js"></script>
     <link rel="stylesheet" href="main.css">
 </head>
 
@@ -120,6 +119,22 @@
         <p>Connect with me on LinkedIn | GitHub🌐</p>
         </p>
     </footer>
+    <script>
+        var form = document.getElementById('sheetdb-form');
+        form.addEventListener("submit", e => {
+            e.preventDefault();
+            fetch(form.action, {
+                method: "POST",
+                body: new FormData(document.getElementById("sheetdb-form")),
+            }).then(
+                response => response.json()
+            ).then((html) => {
+                alert('Submitted !! 😊 Thank you ' + document.getElementById('CName').value)
+                window.location.href = '';
+                location.reload();
+            });
+        });
+    </script>
 
 </body>
 
