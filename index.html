@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <!-- <script src="main.js"></script> -->
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h3>😂 Pritam Das </h3>
+            <ul>
+                <li><a href="#About">About Me 🤔</a></li>
+                <li><a href="#Experience"> Experience 💼</a></li>
+                <li><a href="#Skills"> Skills 🛠️</a></li>
+                <li><a href="#myWork">My Work 💻</a></li>
+                <li><a href="#Contact"> Contact 📬</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="About">
+        <h2>About me</h2>
+        <p>Welcome to my portfolio! I am a web developer with a passion for creating modern and responsive websites.</p>
+    </section>
+
+
+    <section id="Experience">
+        <h1>Experience 💼</h1>
+        <div class="box">
+            <h2>Frontend Developer@TechCorp🖥️</h2>
+            <p>Jan2020-present</p>
+            <p>Worked on developing responsive web applications using React, HTML, and CSS. Collaborated with designers
+                to improve user experiences. </p>
+        </div>
+
+        <div class="box">
+            <h2>Web Developer @ WebStudio🌐 </h2>
+            <p>Jan2020-present</p>
+            <p>Worked on developing responsive web applications using React, HTML, and CSS. Collaborated with designers
+                to improve user experiences..</p>
+        </div>
+    </section>
+
+    <section id="Skills">
+        <h1>Skills 🛠️</h1>
+        <div class="article">
+            <h3>HTML&CSS</h3>
+            <p>Proficient in creating semantic and accessible HTML documents, styling with modern CSS techniques
+                including Flexbox and Grid.</p>
+        </div>
+
+        <div class="article">
+            <h3>JavaScript & React ⚛️</h3>
+            <p>Experienced in building interactive user interfaces with React. Familiar with ES6+ features and modern
+                JavaScript frameworks.</p>
+        </div>
+
+        <div class="article">
+            <h3>Responsive Design 📱</h3>
+            <p>Adept at designing responsive websites that work across a variety of devices using media queries and
+                mobile-first design principles.</p>
+        </div>
+
+        <div class="article">
+            <h3>Version Control with Git 🌳</h3>
+            <p>Comfortable with Git for version control, including branching, merging, and collaborating on projects
+                using GitHub or GitLab.</p>
+        </div>
+
+    </section>
+
+    <section id="myWork">
+        <h1>My Projects 🎨</h1>
+
+        <div class="project">
+
+
+            <div class="work">
+                <h3>Project 1 🎯</h3>
+                <img src="eri.jpeg">
+                <p>his is a description of my first project. 💡</p>
+            </div>
+            <div class="work">
+                <h3>Project 2 🛠️</h3>
+                <img src="eri.jpeg">
+                <p>This is a description of my second project. 🔧</p>
+            </div>
+            <div class="work">
+                <h3>Project 3 🌐</h3>
+                <img src="eri.jpeg">
+                <p>This is a description of my third project. 🌍</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="Contact">
+        <h1>Contact Me 🤝</h1>
+        <form id="sheetdb-form" action="https://sheetdb.io/api/v1/ofzyg2t2qbgui" method="post">
+            <label for="">Name</label>
+            <input type="text" name="data[Name]" id="CName">
+            <label for="">E-Mail</label>
+            <input type="text" name="data[E-Mail]" id="name">
+            <label for="">Message</label>
+            <textarea name="data[Message]" id="Message" rows="4"></textarea>
+            <input type="submit" value="Send 🚀" class="button">
+            <!-- <button type="submit">Send 🚀</button> -->
+
+        </form>
+
+    </section>
+
+
+    <footer>
+        <p>
+        <p>Connect with me on LinkedIn | GitHub🌐</p>
+        </p>
+    </footer>
+
+    <script>
+        var form = document.getElementById('sheetdb-form');
+        form.addEventListener("submit", e => {
+            e.preventDefault();
+            fetch(form.action, {
+                method: "POST",
+                body: new FormData(document.getElementById("sheetdb-form")),
+            }).then(
+                response => response.json()
+            ).then((html) => {
+                alert('Submitted !! 😊 Thank you ' + document.getElementById('CName').value)
+                window.location.href = '';
+                location.reload();
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>
